@@ -1,0 +1,20 @@
+
+<mat-drawer-container class="example-container" autosize>
+    
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        <span>Universidad CoderHouse</span>
+     </mat-toolbar>
+
+     <main>
+     <app-students/>
+    </main>
+    <mat-drawer [opened]="isMobile() ? 'false' : 'true'" #drawer class="example-sidenav" [mode]="isMobile() ? 'over' : 'side'">
+    <ul>
+        <li><a href="">Students</a></li>
+        <li><a href="">Class</a></li>
+    </ul>
+    </mat-drawer>
+  </mat-drawer-container>
